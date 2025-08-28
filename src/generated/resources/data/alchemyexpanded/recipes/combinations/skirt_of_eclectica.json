@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "minecraft:leather_leggings"
+  },
+  "input2": {
+    "item": "alchemyexpanded:blue_beauty"
+  },
+  "mode": "and",
+  "output": {
+    "item": "alchemyexpanded:skirt_of_eclectica"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_ingot"
+    },
+    "%": {
+      "item": "minecraft:string"
+    },
+    "&": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#&#",
+    " #%"
+  ],
+  "result": {
+    "item": "alchemyexpanded:yoyo"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "alchemyexpanded:yoyo"
+  },
+  "input2": {
+    "item": "minestuck:chessboard"
+  },
+  "mode": "or",
+  "output": {
+    "item": "alchemyexpanded:regiyoyo"
+  }
+}

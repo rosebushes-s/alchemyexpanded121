@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "minestuck:scythe"
+  },
+  "input2": {
+    "item": "minestuck:tilldeath_handbook"
+  },
+  "mode": "and",
+  "output": {
+    "item": "alchemyexpanded:tildeath_do_us_part"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "alchemyexpanded:rose_rotator"
+  },
+  "input2": {
+    "item": "alchemyexpanded:green_sun_book"
+  },
+  "mode": "or",
+  "output": {
+    "item": "alchemyexpanded:green_sun_sleeper"
+  }
+}

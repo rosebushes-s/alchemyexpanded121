@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "alchemyexpanded:bombing_glove"
+  },
+  "input2": {
+    "item": "alchemyexpanded:nuclear_warhead"
+  },
+  "mode": "and",
+  "output": {
+    "item": "alchemyexpanded:meltdown_mitt"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "alchemyexpanded:yoyo"
+  },
+  "input2": {
+    "item": "minestuck:eightball"
+  },
+  "mode": "and",
+  "output": {
+    "item": "alchemyexpanded:cerulean_stacks"
+  }
+}

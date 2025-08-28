@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "minecraft:leather_boots"
+  },
+  "input2": {
+    "item": "minestuck:power_hub"
+  },
+  "mode": "and",
+  "output": {
+    "item": "alchemyexpanded:skaianet_sneakers"
+  }
+}

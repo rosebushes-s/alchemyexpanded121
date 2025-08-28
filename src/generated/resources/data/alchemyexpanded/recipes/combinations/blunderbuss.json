@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "alchemyexpanded:shotgun"
+  },
+  "input2": {
+    "item": "alchemyexpanded:flintlock_rifle"
+  },
+  "mode": "or",
+  "output": {
+    "item": "alchemyexpanded:blunderbuss"
+  }
+}

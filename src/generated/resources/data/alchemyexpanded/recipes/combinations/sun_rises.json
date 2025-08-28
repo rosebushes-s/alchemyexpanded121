@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "alchemyexpanded:carbon_oracle"
+  },
+  "input2": {
+    "item": "minestuck:star_ray"
+  },
+  "mode": "and",
+  "output": {
+    "item": "alchemyexpanded:sun_rises"
+  }
+}

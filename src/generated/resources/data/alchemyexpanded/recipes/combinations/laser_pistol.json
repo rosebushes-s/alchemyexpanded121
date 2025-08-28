@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "alchemyexpanded:revolver"
+  },
+  "input2": {
+    "item": "alchemyexpanded:laser_ammo"
+  },
+  "mode": "and",
+  "output": {
+    "item": "alchemyexpanded:laser_pistol"
+  }
+}

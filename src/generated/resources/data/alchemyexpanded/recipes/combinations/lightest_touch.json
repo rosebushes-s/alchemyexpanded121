@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "alchemyexpanded:gauntlet"
+  },
+  "input2": {
+    "item": "minecraft:phantom_membrane"
+  },
+  "mode": "and",
+  "output": {
+    "item": "alchemyexpanded:lightest_touch"
+  }
+}

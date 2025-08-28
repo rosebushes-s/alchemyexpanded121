@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "!": {
+      "item": "minecraft:copper_ingot"
+    },
+    "#": {
+      "item": "alchemyexpanded:flintlock_pistol"
+    },
+    "@": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "  !",
+    " # ",
+    "@  "
+  ],
+  "result": {
+    "item": "alchemyexpanded:flintlock_rifle"
+  }
+}

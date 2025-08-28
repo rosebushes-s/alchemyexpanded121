@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:leather"
+    },
+    "&": {
+      "item": "minecraft:iron_ingot"
+    },
+    "*": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "###",
+    "#&#",
+    "##*"
+  ],
+  "result": {
+    "item": "alchemyexpanded:boxing_glove"
+  }
+}

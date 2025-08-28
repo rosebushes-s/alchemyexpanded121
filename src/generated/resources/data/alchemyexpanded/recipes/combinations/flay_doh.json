@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "minecraft:clay_ball"
+  },
+  "input2": {
+    "item": "minestuck:grub_sauce"
+  },
+  "mode": "and",
+  "output": {
+    "item": "alchemyexpanded:flay_doh"
+  }
+}

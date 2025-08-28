@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "minestuck:blank_disk"
+  },
+  "input2": {
+    "item": "minecraft:string"
+  },
+  "mode": "and",
+  "output": {
+    "item": "alchemyexpanded:yoyo"
+  }
+}

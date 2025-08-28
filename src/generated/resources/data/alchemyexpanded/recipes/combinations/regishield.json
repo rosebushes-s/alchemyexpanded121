@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "alchemyexpanded:copper_shield"
+  },
+  "input2": {
+    "item": "minestuck:chessboard"
+  },
+  "mode": "and",
+  "output": {
+    "item": "alchemyexpanded:regishield"
+  }
+}

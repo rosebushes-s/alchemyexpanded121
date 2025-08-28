@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "alchemyexpanded:gun_parts"
+  },
+  "input2": {
+    "item": "minecraft:flint"
+  },
+  "mode": "and",
+  "output": {
+    "item": "alchemyexpanded:flintlock_rifle"
+  }
+}

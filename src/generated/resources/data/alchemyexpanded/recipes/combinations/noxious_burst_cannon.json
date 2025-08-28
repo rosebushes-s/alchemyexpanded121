@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "alchemyexpanded:breath_blaster"
+  },
+  "input2": {
+    "item": "minestuck:fungal_spore"
+  },
+  "mode": "or",
+  "output": {
+    "item": "alchemyexpanded:noxious_burst_cannon"
+  }
+}

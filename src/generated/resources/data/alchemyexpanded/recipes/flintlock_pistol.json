@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:tripwire_hook"
+    },
+    "W": {
+      "item": "alchemyexpanded:ammo"
+    },
+    "X": {
+      "item": "minecraft:flint"
+    },
+    "Y": {
+      "item": "minecraft:copper_ingot"
+    },
+    "Z": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "pattern": [
+    "#XY",
+    "ZW ",
+    "Y  "
+  ],
+  "result": {
+    "item": "alchemyexpanded:flintlock_pistol"
+  }
+}

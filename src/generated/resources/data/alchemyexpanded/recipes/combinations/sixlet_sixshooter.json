@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "alchemyexpanded:revolver"
+  },
+  "input2": {
+    "item": "minestuck:mercury_sixlets"
+  },
+  "mode": "or",
+  "output": {
+    "item": "alchemyexpanded:sixlet_sixshooter"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "alchemyexpanded:yoyo"
+  },
+  "input2": {
+    "item": "minestuck:mini_wizard_statue"
+  },
+  "mode": "and",
+  "output": {
+    "item": "alchemyexpanded:wizard_spinner"
+  }
+}

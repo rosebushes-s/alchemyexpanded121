@@ -1,0 +1,13 @@
+{
+  "type": "minestuck:combination",
+  "input1": {
+    "item": "alchemyexpanded:white_shirt_devilbeast"
+  },
+  "input2": {
+    "item": "alchemyexpanded:blue_beauty"
+  },
+  "mode": "and",
+  "output": {
+    "item": "alchemyexpanded:top_of_eclectica"
+  }
+}
