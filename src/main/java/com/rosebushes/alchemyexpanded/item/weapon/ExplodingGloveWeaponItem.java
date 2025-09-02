@@ -1,5 +1,6 @@
 package com.rosebushes.alchemyexpanded.item.weapon;
 
+import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -8,7 +9,7 @@ import net.minecraft.world.level.Level;
 
 public class ExplodingGloveWeaponItem extends GloveWeaponItem {
     private final int explosionRadius;
-    public ExplodingGloveWeaponItem(Properties properties, int atkDamage, float atkSpeed, MobEffect effect, int radius) {
+    public ExplodingGloveWeaponItem(Properties properties, int atkDamage, float atkSpeed, Holder<MobEffect> effect, int radius) {
         super(properties, atkDamage, atkSpeed, effect);
         this.explosionRadius = radius;
     }

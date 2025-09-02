@@ -9,14 +9,14 @@ public class DressOfEclecticaArmorModel extends GeoModel<DressOfEclecticaItem> {
     }
 
     public ResourceLocation getModelResource(DressOfEclecticaItem animatable) {
-        return new ResourceLocation("alchemyexpanded", "geo/skirt_clothes_model.geo.json");
+        return ResourceLocation.fromNamespaceAndPath("alchemyexpanded", "geo/skirt_clothes_model.geo.json");
     }
 
     public ResourceLocation getTextureResource(DressOfEclecticaItem animatable) {
-        return new ResourceLocation("alchemyexpanded", "textures/models/armor/dress_of_eclectica.png");
+        return ResourceLocation.fromNamespaceAndPath("alchemyexpanded", "textures/models/armor/dress_of_eclectica.png");
     }
 
     public ResourceLocation getAnimationResource(DressOfEclecticaItem animatable) {
-        return new ResourceLocation("alchemyexpanded", "animations/dress_of_eclectica.animation.json");
+        return ResourceLocation.fromNamespaceAndPath("alchemyexpanded", "animations/dress_of_eclectica.animation.json");
     }
 }

@@ -10,8 +10,6 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.network.event.RegisterPayloadHandlerEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
@@ -20,6 +18,10 @@ import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 )
 public final class AEPayloads {
     public static final StreamCodec<FriendlyByteBuf, Vec3> VEC3_STREAM_CODEC;
+
+    public AEPayloads() {
+
+    }
 
     @SubscribeEvent
     private static void register(RegisterPayloadHandlersEvent event) {

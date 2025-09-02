@@ -10,14 +10,14 @@ public class DeadShuffleDressArmorModel extends GeoModel<DeadShuffleDressItem> {
     }
 
     public ResourceLocation getModelResource(DeadShuffleDressItem animatable) {
-        return new ResourceLocation("alchemyexpanded", "geo/dead_shuffle_model.geo.json");
+        return ResourceLocation.fromNamespaceAndPath("alchemyexpanded", "geo/dead_shuffle_model.geo.json");
     }
 
     public ResourceLocation getTextureResource(DeadShuffleDressItem animatable) {
-        return new ResourceLocation("alchemyexpanded", "textures/models/armor/dead_shuffle_dress.png");
+        return ResourceLocation.fromNamespaceAndPath("alchemyexpanded", "textures/models/armor/dead_shuffle_dress.png");
     }
 
     public ResourceLocation getAnimationResource(DeadShuffleDressItem animatable) {
-        return new ResourceLocation("alchemyexpanded", "animations/dead_shuffle_dress.animation.json");
+        return ResourceLocation.fromNamespaceAndPath("alchemyexpanded", "animations/dead_shuffle_dress.animation.json");
     }
 }

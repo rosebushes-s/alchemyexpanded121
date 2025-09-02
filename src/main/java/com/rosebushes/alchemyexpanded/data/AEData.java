@@ -29,11 +29,11 @@ public class AEData {
         DataGenerator gen = event.getGenerator();
         PackOutput output = gen.getPackOutput();
         ExistingFileHelper fileHelper = event.getExistingFileHelper();
-        DatapackBuiltinEntriesProvider builtinEntries = (DatapackBuiltinEntriesProvider)gen.addProvider(event.includeServer(), new DatapackBuiltinEntriesProvider(output, event.getLookupProvider(), registrySetBuilder(), Set.of("minestuck")));
+        DatapackBuiltinEntriesProvider builtinEntries = (DatapackBuiltinEntriesProvider)gen.addProvider(event.includeServer(), new DatapackBuiltinEntriesProvider(output, event.getLookupProvider(), registrySetBuilder(), Set.of("alchemyexpanded")));
         CompletableFuture<HolderLookup.Provider> lookupProvider = builtinEntries.getRegistryProvider();
         gen.addProvider(event.includeServer(), new AERecipeProvider(output, lookupProvider));
         gen.addProvider(event.includeServer(), new AEDamageTypeProvider.Tags(output, lookupProvider, fileHelper));
-        gen.addProvider(event.includeServer(), AELootTableProvider.create(output));
+        gen.addProvider(event.includeServer(), AELootTableProvider.create(output, lookupProvider));
     }
 
     private static RegistrySetBuilder registrySetBuilder() {

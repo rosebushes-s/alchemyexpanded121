@@ -19,7 +19,7 @@ import net.neoforged.neoforge.network.codec.NeoForgeStreamCodecs;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 
 public record BulletEffectPacket(Vec3 pos, Vec3 lookVec) implements MSPacket.PlayToClient{
-    public static final CustomPacketPayload.Type<BulletEffectPacket> ID = new CustomPacketPayload.Type(AlchemyExpanded.id("bullet_effect"));
+    public static final CustomPacketPayload.Type<BulletEffectPacket> ID = new CustomPacketPayload.Type<>(AlchemyExpanded.id("bullet_effect"));
     public static final StreamCodec<FriendlyByteBuf, BulletEffectPacket> STREAM_CODEC;
 
     public BulletEffectPacket(Vec3 pos, Vec3 lookVec) {

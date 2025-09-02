@@ -8,6 +8,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
@@ -68,7 +69,9 @@ public class LaserGunWeaponItem extends GunWeaponItem {
     }
 
     protected void sendEffectPacket(Level level, Vec3 pos, Vec3 lookVec, int length, boolean collides) {
-        PacketDistributor.NEAR.with(new PacketDistributor.TargetPoint(pos.x, pos.y, pos.z, (double)64.0F, level.dimension())).send(new CustomPacketPayload[]{new MagicRangedEffectPacket(MagicEffect.RangedType.RED, pos, lookVec, length, collides)});
+        if(!level.isClientSide) {
+            PacketDistributor.sendToPlayersNear((ServerLevel) level, null, pos.x, pos.y, pos.z, 64.0, new MagicRangedEffectPacket(MagicEffect.RangedType.RED, pos, lookVec, length, collides));
+        }
     }
 
     @Override
@@ -88,9 +91,10 @@ public class LaserGunWeaponItem extends GunWeaponItem {
 
     private boolean checkCollisionInPath(Level level, ServerPlayer player, Vec3 vecPos, boolean dualWield) {
             BlockPos blockPos = BlockPos.containing(vecPos);
-            if (!level.getBlockState(blockPos).isPathfindable(level, blockPos, PathComputationType.LAND)) {
+            if(!level.getBlockState(blockPos).isPathfindable(PathComputationType.LAND)) {
                 return true;
-            } else {
+            }
+            else {
                 AABB axisAlignedBB = new AABB(blockPos);
                 LivingEntity closestTarget = player.level().getNearestEntity(LivingEntity.class, visiblePredicate, player, vecPos.x, vecPos.y, vecPos.z, axisAlignedBB);
                 if (closestTarget != null) {
@@ -108,7 +112,7 @@ public class LaserGunWeaponItem extends GunWeaponItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         int rate = getRate();
         double reloadTime = (double) Math.round((getReload() * 0.05) * 2) / 2.0F;
         int ammoCap = getAmmo();

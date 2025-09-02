@@ -30,7 +30,7 @@ public class FlareProjectileEntity extends ProjectileEntity {
 
         Entity target = result.getEntity();
         if(target instanceof LivingEntity) {
-            target.setSecondsOnFire(getTargetFireSeconds());
+            target.setRemainingFireTicks(getTargetFireSeconds() * 20);
         }
     }
 

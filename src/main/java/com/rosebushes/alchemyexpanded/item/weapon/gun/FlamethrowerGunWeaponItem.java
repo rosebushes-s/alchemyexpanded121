@@ -5,6 +5,7 @@ import com.mraof.minestuck.network.MagicRangedEffectPacket;
 import com.rosebushes.alchemyexpanded.util.AESoundEvents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
@@ -32,12 +33,14 @@ public class FlamethrowerGunWeaponItem extends LaserGunWeaponItem {
     @Override
     public void onHitEntity(LivingEntity entity) {
         super.onHitEntity(entity);
-        entity.setSecondsOnFire(4);
+        entity.setRemainingFireTicks(80);
     }
 
     @Override
     protected void sendEffectPacket(Level level, Vec3 pos, Vec3 lookVec, int length, boolean collides) {
-        PacketDistributor.NEAR.with(new PacketDistributor.TargetPoint(pos.x, pos.y, pos.z, (double)64.0F, level.dimension())).send(new CustomPacketPayload[]{new MagicRangedEffectPacket(MagicEffect.RangedType.FIRE, pos, lookVec, length, collides)});
+        if(!level.isClientSide) {
+            PacketDistributor.sendToPlayersNear((ServerLevel) level, null, pos.x, pos.y, pos.z, 64.0, new MagicRangedEffectPacket(MagicEffect.RangedType.FIRE, pos, lookVec, length, collides));
+        }
     }
 
     @Override

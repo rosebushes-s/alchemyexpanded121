@@ -37,7 +37,7 @@ public class CueballGunWeaponItem extends GunWeaponItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         double reloadTime = (double) Math.round((getReload() * 0.05) * 2) / 2.0F;
         int ammoConsumption = getAmmoConsume();
         String ammoType = getAmmoType().getDescriptionId();

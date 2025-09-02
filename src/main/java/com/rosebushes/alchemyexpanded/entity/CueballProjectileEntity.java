@@ -4,6 +4,7 @@ import com.mraof.minestuck.entity.underling.BasiliskEntity;
 import com.mraof.minestuck.entity.underling.BasiliskPartEntity;
 import com.mraof.minestuck.item.MSItems;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -43,7 +44,7 @@ public class CueballProjectileEntity extends ProjectileEntity {
                     Vec3 eyePos = target.getEyePosition(1.0F);
                     Vec3 lookVec = shooter.getLookAngle();
 
-                    this.sendEffectPacket(shooter.level(), eyePos, lookVec);
+                    this.sendEffectPacket((ServerLevel) shooter.level(), eyePos, lookVec);
                 }
             }
             if(shooter != null && target instanceof ServerPlayer) {

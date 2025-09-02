@@ -323,37 +323,37 @@ public class AEItems {
         SKIRT_OF_ECLECTICA = REGISTER.register("skirt_of_eclectica", () -> new DressOfEclecticaItem(AEItemTypes.ECLECTICA_ARMOR, ArmorItem.Type.LEGGINGS, new Item.Properties()));
         SLIPPERS_OF_ECLECTICA = REGISTER.register("slippers_of_eclectica", () -> new DressOfEclecticaItem(AEItemTypes.ECLECTICA_ARMOR, ArmorItem.Type.BOOTS, new Item.Properties()));
 
-        SQUARE_GLASSES = REGISTER.register("square_glasses", () -> new AEArmorItem(AEItemTypes.SHADES_ARMOR, ArmorItem.Type.HELMET, new Item.Properties().defaultDurability(800)));
-        ROUND_GLASSES = REGISTER.register("round_glasses", () -> new AEArmorItem(AEItemTypes.SHADES_ARMOR, ArmorItem.Type.HELMET, new Item.Properties().defaultDurability(800)));
-        SHADES = REGISTER.register("shades", () -> new AEArmorItem(AEItemTypes.SHADES_ARMOR, ArmorItem.Type.HELMET, new Item.Properties().defaultDurability(800)));
-        ANIME_SHADES = REGISTER.register("anime_shades", () -> new AEArmorItem(AEItemTypes.SHADES_ARMOR, ArmorItem.Type.HELMET, new Item.Properties().defaultDurability(800)));
+        SQUARE_GLASSES = REGISTER.register("square_glasses", () -> new AEArmorItem(AEItemTypes.SHADES_ARMOR, ArmorItem.Type.HELMET, new Item.Properties().durability(800)));
+        ROUND_GLASSES = REGISTER.register("round_glasses", () -> new AEArmorItem(AEItemTypes.SHADES_ARMOR, ArmorItem.Type.HELMET, new Item.Properties().durability(800)));
+        SHADES = REGISTER.register("shades", () -> new AEArmorItem(AEItemTypes.SHADES_ARMOR, ArmorItem.Type.HELMET, new Item.Properties().durability(800)));
+        ANIME_SHADES = REGISTER.register("anime_shades", () -> new AEArmorItem(AEItemTypes.SHADES_ARMOR, ArmorItem.Type.HELMET, new Item.Properties().durability(800)));
 
-        ITEM_MAGNET_HELMET = REGISTER.register("item_magnet_helmet", () -> new ItemMagnetArmorItem(AEItemTypes.MAGNET_ARMOR, ArmorItem.Type.HELMET, new Item.Properties().defaultDurability(1406), 6));
-        GRIST_MAGNET_HELMET = REGISTER.register("grist_magnet_helmet", () -> new GristMagnetArmorItem(AEItemTypes.MAGNET_ARMOR, ArmorItem.Type.HELMET, new Item.Properties().defaultDurability(1824), 6));
-        SKAIANET_SNEAKERS = REGISTER.register("skaianet_sneakers", () -> new SkaianetSneakersArmorItem(new Item.Properties().defaultDurability(1200)));
+        ITEM_MAGNET_HELMET = REGISTER.register("item_magnet_helmet", () -> new ItemMagnetArmorItem(AEItemTypes.MAGNET_ARMOR, ArmorItem.Type.HELMET, new Item.Properties().durability(1406), 6));
+        GRIST_MAGNET_HELMET = REGISTER.register("grist_magnet_helmet", () -> new GristMagnetArmorItem(AEItemTypes.MAGNET_ARMOR, ArmorItem.Type.HELMET, new Item.Properties().durability(1824), 6));
+        SKAIANET_SNEAKERS = REGISTER.register("skaianet_sneakers", () -> new SkaianetSneakersArmorItem(new Item.Properties().durability(1200)));
 
         MAGMATIC_HELMET = REGISTER.register("magmatic_helmet", () -> new MagmaticArmorItem(AEItemTypes.MAGMATIC_ARMOR, ArmorItem.Type.HELMET, new Item.Properties()));
         MAGMATIC_CHESTPLATE = REGISTER.register("magmatic_chestplate", () -> new MagmaticArmorItem(AEItemTypes.MAGMATIC_ARMOR, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
         MAGMATIC_LEGGINGS = REGISTER.register("magmatic_leggings", () -> new MagmaticArmorItem(AEItemTypes.MAGMATIC_ARMOR, ArmorItem.Type.LEGGINGS, new Item.Properties()));
         MAGMATIC_BOOTS = REGISTER.register("magmatic_boots", () -> new MagmaticArmorItem(AEItemTypes.MAGMATIC_ARMOR, ArmorItem.Type.BOOTS, new Item.Properties()));
 
-        COPPER_SHIELD = REGISTER.register("copper_shield", () -> new AEShieldItem(new Item.Properties().defaultDurability(600), 0.5, 1.0, -0.1));
-        STEAM_POWERED_HYDROFAN = REGISTER.register("steam_powered_hydrofan", () -> new WaterJetShieldItem(new Item.Properties().defaultDurability(950), 0.5, 1.5, 0.05));
-        PYRE_PROTECTOR = REGISTER.register("pyre_protector", () -> new FireShieldItem(new Item.Properties().defaultDurability(1162), 1.5, 1.0, -0.2));
-        ROSE_BRAMBLE_BUCKLER = REGISTER.register("rose_bramble_buckler", () -> new DamagingShieldItem(new Item.Properties().defaultDurability(948), 1.5, 1.0, 0));
-        RAZOR_SHIELD = REGISTER.register("razor_shield", () -> new DamagingShieldItem(new Item.Properties().defaultDurability(756), 2.5, 0.5, 0));
-        POGO_SHIELD = REGISTER.register("pogo_shield", () -> new PogoShieldItem(new Item.Properties().defaultDurability(1413), 1.0, 2.0, -0.2));
-        REGISHIELD = REGISTER.register("regishield", () -> new AEShieldItem(new Item.Properties().defaultDurability(1650), 2.0, 2.0, -0.15));
+        COPPER_SHIELD = REGISTER.register("copper_shield", () -> new AEShieldItem(AEItemTypes.SHIELD_TOOL_TYPE, new Item.Properties().durability(600), 0.5, 1.0, -0.1));
+        STEAM_POWERED_HYDROFAN = REGISTER.register("steam_powered_hydrofan", () -> new WaterJetShieldItem(new Item.Properties().durability(950), 0.5, 1.5, 0.05));
+        PYRE_PROTECTOR = REGISTER.register("pyre_protector", () -> new FireShieldItem(new Item.Properties().durability(1162), 1.5, 1.0, -0.2));
+        ROSE_BRAMBLE_BUCKLER = REGISTER.register("rose_bramble_buckler", () -> new DamagingShieldItem(new Item.Properties().durability(948), 1.5, 1.0, 0));
+        RAZOR_SHIELD = REGISTER.register("razor_shield", () -> new DamagingShieldItem(new Item.Properties().durability(756), 2.5, 0.5, 0));
+        POGO_SHIELD = REGISTER.register("pogo_shield", () -> new PogoShieldItem(new Item.Properties().durability(1413), 1.0, 2.0, -0.2));
+        REGISHIELD = REGISTER.register("regishield", () -> new AEShieldItem(AEItemTypes.SHIELD_TOOL_TYPE, new Item.Properties().durability(1650), 2.0, 2.0, -0.15));
 
         COOKING_WITH_SADAKO = REGISTER.register("cooking_with_sadako", () -> new WeaponItem((new WeaponItem.Builder(MSItemTypes.HORRORTERROR_TIER, 1, -2.4F)).efficiency(2.0F).set(MSItemTypes.SHOVEL_TOOL), new Item.Properties().rarity(Rarity.RARE)));
 
-        DRAGON_SAW = REGISTER.register("dragon_saw", () -> new WeaponItem(new WeaponItem.Builder(Tiers.DIAMOND, 2, -1.5F).efficiency(10.0F).set(MSItemTypes.CHAINSAW_TOOL).set(ItemRightClickEffect.switchTo(AEItems.RED_DRAGON_LIPSTICK)), new Item.Properties().defaultDurability(450)));
-        RED_DRAGON_LIPSTICK = REGISTER.register("red_dragon_lipstick", () -> new WeaponItem(new WeaponItem.Builder(Tiers.IRON, -1, -0.5F).efficiency(10.0F).set(ItemRightClickEffect.switchTo(AEItems.DRAGON_SAW)), new Item.Properties().defaultDurability(450)));
+        DRAGON_SAW = REGISTER.register("dragon_saw", () -> new WeaponItem(new WeaponItem.Builder(Tiers.DIAMOND, 2, -1.5F).efficiency(10.0F).set(MSItemTypes.CHAINSAW_TOOL).set(ItemRightClickEffect.switchTo(AEItems.RED_DRAGON_LIPSTICK)), new Item.Properties().durability(450)));
+        RED_DRAGON_LIPSTICK = REGISTER.register("red_dragon_lipstick", () -> new WeaponItem(new WeaponItem.Builder(Tiers.IRON, -1, -0.5F).efficiency(10.0F).set(ItemRightClickEffect.switchTo(AEItems.DRAGON_SAW)), new Item.Properties().durability(450)));
 
-        CARVED_WAND = REGISTER.register("carved_wand", () -> new WeaponItem((new WeaponItem.Builder(Tiers.WOOD, 3, -1.0F).efficiency(10.0F).set(MSItemTypes.WAND_TOOL).set(MagicRangedRightClickEffect.STANDARD_MAGIC)), new Item.Properties().defaultDurability(824)));
-        RESIN_WAND = REGISTER.register("resin_wand", () -> new WeaponItem((new WeaponItem.Builder(MSItemTypes.CORUNDUM_TIER, 0, -1.0F).efficiency(10.0F).set(MSItemTypes.WAND_TOOL).set(MagicAOERightClickEffect.FIRE_MAGIC)), new Item.Properties().defaultDurability(1162)));
-        BREAK_AUGUR = REGISTER.register("break_augur", () -> new WeaponItem((new WeaponItem.Builder(Tiers.IRON, 2, -1.0F).efficiency(10.0F).set(MSItemTypes.WAND_TOOL).set(MagicRangedRightClickEffect.POOL_CUE_MAGIC)), new Item.Properties().defaultDurability(1585)));
-        ANVIL_AURAWAND = REGISTER.register("anvil_aurawand", () -> new WeaponItem((new WeaponItem.Builder(Tiers.IRON, 3, -1.0F).efficiency(10.0F).set(MSItemTypes.WAND_TOOL).set(MagicAOERightClickEffect.FIRE_MAGIC)), new Item.Properties().defaultDurability(1434)));
+        CARVED_WAND = REGISTER.register("carved_wand", () -> new WeaponItem((new WeaponItem.Builder(Tiers.WOOD, 3, -1.0F).efficiency(10.0F).set(MSItemTypes.WAND_TOOL).set(MagicRangedRightClickEffect.STANDARD_MAGIC)), new Item.Properties().durability(824)));
+        RESIN_WAND = REGISTER.register("resin_wand", () -> new WeaponItem((new WeaponItem.Builder(MSItemTypes.CORUNDUM_TIER, 0, -1.0F).efficiency(10.0F).set(MSItemTypes.WAND_TOOL).set(MagicAOERightClickEffect.FIRE_MAGIC)), new Item.Properties().durability(1162)));
+        BREAK_AUGUR = REGISTER.register("break_augur", () -> new WeaponItem((new WeaponItem.Builder(Tiers.IRON, 2, -1.0F).efficiency(10.0F).set(MSItemTypes.WAND_TOOL).set(MagicRangedRightClickEffect.POOL_CUE_MAGIC)), new Item.Properties().durability(1585)));
+        ANVIL_AURAWAND = REGISTER.register("anvil_aurawand", () -> new WeaponItem((new WeaponItem.Builder(Tiers.IRON, 3, -1.0F).efficiency(10.0F).set(MSItemTypes.WAND_TOOL).set(MagicAOERightClickEffect.FIRE_MAGIC)), new Item.Properties().durability(1434)));
 
         GHOST_IN_THE_MACHINE = REGISTER.register("ghost_in_the_machine", () -> new WeaponItem((new WeaponItem.Builder(MSItemTypes.HORRORTERROR_TIER, 2, -1.0F)).efficiency(1.0F).set(MSItemTypes.KEY_TOOL), new Item.Properties().rarity(Rarity.RARE)));
 
@@ -365,7 +365,7 @@ public class AEItems {
         KEY = REGISTER.register("key", () -> new WeaponItem((new WeaponItem.Builder(Tiers.IRON, 0, -1.0F).efficiency(1.0F).set(MSItemTypes.KEY_TOOL).set(ItemRightClickEffect.switchTo(AEItems.REVOLVER))), new Item.Properties()));
         FRONTIER_AXE = REGISTER.register("frontier_axe", () -> new WeaponItem((new WeaponItem.Builder(Tiers.DIAMOND, 7, -3.0F)).efficiency(5.0F).set(MSItemTypes.AXE_TOOL).set(ItemRightClickEffect.switchTo(AEItems.ANNIES_GOT_A_GUN)), new Item.Properties().rarity(Rarity.RARE)));
         DEULING_BLADE = REGISTER.register("deuling_blade", () -> new WeaponItem((new WeaponItem.Builder(Tiers.DIAMOND, 5, -2.4F)).efficiency(1.0F).set(MSItemTypes.SWORD_TOOL).set(ItemRightClickEffect.switchTo(AEItems.DAPPLE_DEULY)), new Item.Properties().rarity(Rarity.RARE)));
-        ASHEN_CHAINSAW = REGISTER.register("ashen_chainsaw", () -> new WeaponItem((new WeaponItem.Builder(Tiers.NETHERITE, 3, -1.5F).efficiency(10.0F).set(MSItemTypes.CHAINSAW_TOOL).set(ItemRightClickEffect.switchTo(AEItems.BOOMSTICK))), new Item.Properties().defaultDurability(1800).rarity(Rarity.UNCOMMON)));
+        ASHEN_CHAINSAW = REGISTER.register("ashen_chainsaw", () -> new WeaponItem((new WeaponItem.Builder(Tiers.NETHERITE, 3, -1.5F).efficiency(10.0F).set(MSItemTypes.CHAINSAW_TOOL).set(ItemRightClickEffect.switchTo(AEItems.BOOMSTICK))), new Item.Properties().durability(1800).rarity(Rarity.UNCOMMON)));
         BLACK_SCEPTER = REGISTER.register("black_scepter", () -> new WeaponItem((new WeaponItem.Builder(Tiers.IRON, 2, -2.0F)).efficiency(1.0F).set(ItemRightClickEffect.switchTo(AEItems.BLACK_ASSAULT_RIFLE)), new Item.Properties()));
         GOLD_SCEPTER = REGISTER.register("gold_scepter", () -> new WeaponItem((new WeaponItem.Builder(Tiers.DIAMOND, 3, -2.0F)).efficiency(1.0F).set(ItemRightClickEffect.switchTo(AEItems.GOLD_ASSAULT_RIFLE)), new Item.Properties().rarity(Rarity.UNCOMMON)));
         GREEN_SUN_CUESTAFF = REGISTER.register("green_sun_cuestaff", () -> new WeaponItem((new WeaponItem.Builder(Tiers.NETHERITE, 7, -2.0F)).efficiency(1.0F).set(ItemRightClickEffect.switchTo(AEItems.ENGLISH_EXECUTIONER)).add(OnHitEffect.requireAspect(EnumAspect.TIME, OnHitEffect.TIME_SLOWNESS_AOE)), new Item.Properties().rarity(Rarity.EPIC)));
@@ -390,42 +390,42 @@ public class AEItems {
         DUMMY_BLACK_DRAGON_DEATH_WHIRLER = REGISTER.register("dummy_black_dragon_death_whirler", () -> new Item(new Item.Properties()));
         DUMMY_OLWYN_LLINYNNOL = REGISTER.register("dummy_olwyn_llinynnol", () -> new Item(new Item.Properties()));
 
-        YOYO = REGISTER.register("yoyo", () -> new YoYoWeaponItem(new Item.Properties().defaultDurability(250), 3, 16, 3, AEItems.DUMMY_YOYO.get()));
-        ROSE_ROTATOR = REGISTER.register("rose_rotator", () -> new YoYoWeaponItem(new Item.Properties().defaultDurability(365), 4, 16, 5, AEItems.DUMMY_ROSE_ROTATOR.get()));
-        ROLLUP_ROTATOR = REGISTER.register("rollup_rotator", () -> new CandyYoYoWeaponItem(new Item.Properties().defaultDurability(278), 2, 16, 5, AEItems.DUMMY_ROLLUP_ROTATOR.get()));
-        CERULEAN_STACKS = REGISTER.register("cerulean_stacks", () -> new YoYoWeaponItem(new Item.Properties().defaultDurability(484), 4, 16, 6, AEItems.DUMMY_CERULEAN_STACKS.get()));
-        WIZARD_SPINNER = REGISTER.register("wizard_spinner", () -> new YoYoWeaponItem(new Item.Properties().defaultDurability(577).rarity(Rarity.UNCOMMON), 4, 16, 7, AEItems.DUMMY_WIZARD_SPINNER.get()));
-        FIRESCALE_THROWER = REGISTER.register("firescale_thrower", () -> new FireYoYoWeaponItem(new Item.Properties().defaultDurability(748).rarity(Rarity.UNCOMMON), 6, 16, 7, AEItems.DUMMY_FIRESCALE_THROWER.get()));
-        CARBON_ORACLE = REGISTER.register("carbon_oracle", () -> new YoYoWeaponItem(new Item.Properties().defaultDurability(1256).rarity(Rarity.UNCOMMON), 7, 16, 6, AEItems.DUMMY_CARBON_ORACLE.get()));
-        REGIYOYO = REGISTER.register("regiyoyo", () -> new YoYoWeaponItem(new Item.Properties().defaultDurability(864), 6, 16, 6, AEItems.DUMMY_REGIYOYO.get()));
-        DEATHS_COUNTERWEIGHT = REGISTER.register("deaths_counterweight", () -> new YoYoWeaponItem(new Item.Properties().defaultDurability(1142).rarity(Rarity.UNCOMMON), 7, 16, 6, AEItems.DUMMY_DEATHS_COUNTERWEIGHT.get()));
-        ROTATIONAL_GENESIS = REGISTER.register("rotational_genesis", () -> new YoYoWeaponItem(new Item.Properties().defaultDurability(1460).rarity(Rarity.UNCOMMON), 8, 16, 8, AEItems.DUMMY_ROTATIONAL_GENESIS.get()));
-        SPINNER_OF_THE_CYCLE = REGISTER.register("spinner_of_the_cycle", () -> new YoYoWeaponItem(new Item.Properties().defaultDurability(2413).rarity(Rarity.RARE), 9, 16, 10, AEItems.DUMMY_SPINNER_OF_THE_CYCLE.get()));
-        GREEN_SUN_SLEEPER = REGISTER.register("green_sun_sleeper", () -> new YoYoWeaponItem(new Item.Properties().defaultDurability(3200).rarity(Rarity.RARE), 10, 16, 12, AEItems.DUMMY_GREEN_SUN_SLEEPER.get()));
-        SUN_RISES = REGISTER.register("sun_rises", () -> new FireYoYoWeaponItem(new Item.Properties().defaultDurability(1656).rarity(Rarity.UNCOMMON), 8, 16, 6, AEItems.DUMMY_SUN_RISES.get()));
-        BLACK_DRAGON_DEATH_WHIRLER = REGISTER.register("black_dragon_death_whirler", () -> new YoYoWeaponItem(new Item.Properties().defaultDurability(2268).rarity(Rarity.UNCOMMON), 9, 16, 8, AEItems.DUMMY_BLACK_DRAGON_DEATH_WHIRLER.get()));
-        OLWYN_LLINYNNOL = REGISTER.register("olwyn_llinynnol", () -> new YoYoWeaponItem(new Item.Properties().defaultDurability(5555), 14, 16, 14, AEItems.DUMMY_OLWYN_LLINYNNOL.get()));
+        YOYO = REGISTER.register("yoyo", () -> new YoYoWeaponItem(new Item.Properties().durability(250), 3, 16, 3, AEItems.DUMMY_YOYO.get()));
+        ROSE_ROTATOR = REGISTER.register("rose_rotator", () -> new YoYoWeaponItem(new Item.Properties().durability(365), 4, 16, 5, AEItems.DUMMY_ROSE_ROTATOR.get()));
+        ROLLUP_ROTATOR = REGISTER.register("rollup_rotator", () -> new CandyYoYoWeaponItem(new Item.Properties().durability(278), 2, 16, 5, AEItems.DUMMY_ROLLUP_ROTATOR.get()));
+        CERULEAN_STACKS = REGISTER.register("cerulean_stacks", () -> new YoYoWeaponItem(new Item.Properties().durability(484), 4, 16, 6, AEItems.DUMMY_CERULEAN_STACKS.get()));
+        WIZARD_SPINNER = REGISTER.register("wizard_spinner", () -> new YoYoWeaponItem(new Item.Properties().durability(577).rarity(Rarity.UNCOMMON), 4, 16, 7, AEItems.DUMMY_WIZARD_SPINNER.get()));
+        FIRESCALE_THROWER = REGISTER.register("firescale_thrower", () -> new FireYoYoWeaponItem(new Item.Properties().durability(748).rarity(Rarity.UNCOMMON), 6, 16, 7, AEItems.DUMMY_FIRESCALE_THROWER.get()));
+        CARBON_ORACLE = REGISTER.register("carbon_oracle", () -> new YoYoWeaponItem(new Item.Properties().durability(1256).rarity(Rarity.UNCOMMON), 7, 16, 6, AEItems.DUMMY_CARBON_ORACLE.get()));
+        REGIYOYO = REGISTER.register("regiyoyo", () -> new YoYoWeaponItem(new Item.Properties().durability(864), 6, 16, 6, AEItems.DUMMY_REGIYOYO.get()));
+        DEATHS_COUNTERWEIGHT = REGISTER.register("deaths_counterweight", () -> new YoYoWeaponItem(new Item.Properties().durability(1142).rarity(Rarity.UNCOMMON), 7, 16, 6, AEItems.DUMMY_DEATHS_COUNTERWEIGHT.get()));
+        ROTATIONAL_GENESIS = REGISTER.register("rotational_genesis", () -> new YoYoWeaponItem(new Item.Properties().durability(1460).rarity(Rarity.UNCOMMON), 8, 16, 8, AEItems.DUMMY_ROTATIONAL_GENESIS.get()));
+        SPINNER_OF_THE_CYCLE = REGISTER.register("spinner_of_the_cycle", () -> new YoYoWeaponItem(new Item.Properties().durability(2413).rarity(Rarity.RARE), 9, 16, 10, AEItems.DUMMY_SPINNER_OF_THE_CYCLE.get()));
+        GREEN_SUN_SLEEPER = REGISTER.register("green_sun_sleeper", () -> new YoYoWeaponItem(new Item.Properties().durability(3200).rarity(Rarity.RARE), 10, 16, 12, AEItems.DUMMY_GREEN_SUN_SLEEPER.get()));
+        SUN_RISES = REGISTER.register("sun_rises", () -> new FireYoYoWeaponItem(new Item.Properties().durability(1656).rarity(Rarity.UNCOMMON), 8, 16, 6, AEItems.DUMMY_SUN_RISES.get()));
+        BLACK_DRAGON_DEATH_WHIRLER = REGISTER.register("black_dragon_death_whirler", () -> new YoYoWeaponItem(new Item.Properties().durability(2268).rarity(Rarity.UNCOMMON), 9, 16, 8, AEItems.DUMMY_BLACK_DRAGON_DEATH_WHIRLER.get()));
+        OLWYN_LLINYNNOL = REGISTER.register("olwyn_llinynnol", () -> new YoYoWeaponItem(new Item.Properties().durability(5555), 14, 16, 14, AEItems.DUMMY_OLWYN_LLINYNNOL.get()));
 
-        BOXING_GLOVE = REGISTER.register("boxing_glove", () -> new GloveWeaponItem(new Item.Properties().defaultDurability(650), 3, -2.2F, MobEffects.MOVEMENT_SLOWDOWN));
-        KNUCKLE_DUSTER = REGISTER.register("knuckle_duster", () -> new GloveWeaponItem(new Item.Properties().defaultDurability(732), 4, -2.2F, MobEffects.WITHER));
-        REGIKNUCKLE = REGISTER.register("regiknuckle", () -> new GloveWeaponItem(new Item.Properties().defaultDurability(1200), 5, -2.2F, MobEffects.WITHER));
-        ROYAL_KNUCKLE = REGISTER.register("royal_knuckle", () -> new GloveWeaponItem(new Item.Properties().defaultDurability(1628).rarity(Rarity.UNCOMMON), 7, -2.2F, MobEffects.WITHER));
-        GAUNTLET = REGISTER.register("gauntlet", () -> new GloveWeaponItem(new Item.Properties().defaultDurability(846), 5, -2.2F, MobEffects.WEAKNESS));
-        NIGHTTIME_KNOCKOUT = REGISTER.register("nighttime_knockout", () -> new GloveWeaponItem(new Item.Properties().defaultDurability(999), 6, -2.2F, MobEffects.MOVEMENT_SLOWDOWN));
-        MIDNIGHT_BRUISER = REGISTER.register("midnight_bruiser", () -> new GloveWeaponItem(new Item.Properties().defaultDurability(1340), 7, -2.2F, MobEffects.MOVEMENT_SLOWDOWN));
-        FORTUNES_HAND = REGISTER.register("fortunes_hand", () -> new GloveWeaponItem(new Item.Properties().defaultDurability(1077).rarity(Rarity.UNCOMMON), 6, -2.2F, MobEffects.WEAKNESS));
-        BOMBING_GLOVE = REGISTER.register("bombing_glove", () -> new ExplodingGloveWeaponItem(new Item.Properties().defaultDurability(950), 2, -2.2F, MobEffects.MOVEMENT_SLOWDOWN, 3));
-        COBALT_CRYSTAL_PULVERIZER = REGISTER.register("cobalt_crystal_pulverizer", () -> new GloveWeaponItem(new Item.Properties().defaultDurability(1460).rarity(Rarity.UNCOMMON), 7, -2.2F, MobEffects.WEAKNESS));
-        MELTDOWN_MITT = REGISTER.register("meltdown_mitt", () -> new ExplodingGloveWeaponItem(new Item.Properties().defaultDurability(1680).rarity(Rarity.UNCOMMON), 3, -2.2F, MobEffects.MOVEMENT_SLOWDOWN, 6));
-        CRYSTAL_CLAWED_DRAGON_GRIP = REGISTER.register("crystal_clawed_dragon_grip", () -> new GloveWeaponItem(new Item.Properties().defaultDurability(2140).rarity(Rarity.UNCOMMON), 8, -2.2F, MobEffects.WEAKNESS));
-        LIGHTEST_TOUCH = REGISTER.register("lightest_touch", () -> new GloveWeaponItem(new Item.Properties().defaultDurability(2620).rarity(Rarity.RARE), 7, -2.2F, MobEffects.LEVITATION));
-        MANEG = REGISTER.register("maneg", () -> new GloveWeaponItem(new Item.Properties().defaultDurability(4500), 10, -2.2F, MobEffects.WEAKNESS));
+        BOXING_GLOVE = REGISTER.register("boxing_glove", () -> new GloveWeaponItem(new Item.Properties().durability(650), 3, -2.2F, MobEffects.MOVEMENT_SLOWDOWN));
+        KNUCKLE_DUSTER = REGISTER.register("knuckle_duster", () -> new GloveWeaponItem(new Item.Properties().durability(732), 4, -2.2F, MobEffects.WITHER));
+        REGIKNUCKLE = REGISTER.register("regiknuckle", () -> new GloveWeaponItem(new Item.Properties().durability(1200), 5, -2.2F, MobEffects.WITHER));
+        ROYAL_KNUCKLE = REGISTER.register("royal_knuckle", () -> new GloveWeaponItem(new Item.Properties().durability(1628).rarity(Rarity.UNCOMMON), 7, -2.2F, MobEffects.WITHER));
+        GAUNTLET = REGISTER.register("gauntlet", () -> new GloveWeaponItem(new Item.Properties().durability(846), 5, -2.2F, MobEffects.WEAKNESS));
+        NIGHTTIME_KNOCKOUT = REGISTER.register("nighttime_knockout", () -> new GloveWeaponItem(new Item.Properties().durability(999), 6, -2.2F, MobEffects.MOVEMENT_SLOWDOWN));
+        MIDNIGHT_BRUISER = REGISTER.register("midnight_bruiser", () -> new GloveWeaponItem(new Item.Properties().durability(1340), 7, -2.2F, MobEffects.MOVEMENT_SLOWDOWN));
+        FORTUNES_HAND = REGISTER.register("fortunes_hand", () -> new GloveWeaponItem(new Item.Properties().durability(1077).rarity(Rarity.UNCOMMON), 6, -2.2F, MobEffects.WEAKNESS));
+        BOMBING_GLOVE = REGISTER.register("bombing_glove", () -> new ExplodingGloveWeaponItem(new Item.Properties().durability(950), 2, -2.2F, MobEffects.MOVEMENT_SLOWDOWN, 3));
+        COBALT_CRYSTAL_PULVERIZER = REGISTER.register("cobalt_crystal_pulverizer", () -> new GloveWeaponItem(new Item.Properties().durability(1460).rarity(Rarity.UNCOMMON), 7, -2.2F, MobEffects.WEAKNESS));
+        MELTDOWN_MITT = REGISTER.register("meltdown_mitt", () -> new ExplodingGloveWeaponItem(new Item.Properties().durability(1680).rarity(Rarity.UNCOMMON), 3, -2.2F, MobEffects.MOVEMENT_SLOWDOWN, 6));
+        CRYSTAL_CLAWED_DRAGON_GRIP = REGISTER.register("crystal_clawed_dragon_grip", () -> new GloveWeaponItem(new Item.Properties().durability(2140).rarity(Rarity.UNCOMMON), 8, -2.2F, MobEffects.WEAKNESS));
+        LIGHTEST_TOUCH = REGISTER.register("lightest_touch", () -> new GloveWeaponItem(new Item.Properties().durability(2620).rarity(Rarity.RARE), 7, -2.2F, MobEffects.LEVITATION));
+        MANEG = REGISTER.register("maneg", () -> new GloveWeaponItem(new Item.Properties().durability(4500), 10, -2.2F, MobEffects.WEAKNESS));
 
         FLINTLOCK_PISTOL = REGISTER.register("flintlock_pistol", () -> new GunWeaponItem((new Item.Properties()), 3.5F, 2.0F, 1, 3.0F, 10, 1, 1, 80, false, true, AEItems.AMMO.get(), null));
         FLARE_GUN = REGISTER.register("flare_gun", () -> new FlareGunWeaponItem((new Item.Properties()), 5.5F, 1.5, 1, 0.5F, 10, 1, 1, 80, false, true, AEItems.FLARE.get(), null));
         GAMMA_BLASTER = REGISTER.register("gamma_blaster", () -> new EffectLaserGunWeaponItem((new Item.Properties()), 7.5F, 20, 10, 10, 1, 80, MobEffects.WITHER, 80, false, true, AEItems.LASER_AMMO.get(), null));
-        BREATH_BLASTER = REGISTER.register("breath_blaster", () -> new EffectCloudGunWeaponItem((new Item.Properties().rarity(Rarity.UNCOMMON)), 10.5F, 2.0F, 1, 0.5F, 10, 4, 1, 100, 60, 2, Mth.hsvToRgb(0.8F, 1.0F, 0.6F), Potions.HARMING, false, true, AEItems.FLARE.get(), null));
-        NOXIOUS_BURST_CANNON = REGISTER.register("noxious_burst_cannon", () -> new EffectCloudGunWeaponItem((new Item.Properties().rarity(Rarity.UNCOMMON)), 10.5F, 2.0F, 1, 0.5F, 8, 8, 2, 80, 60, 3, Mth.hsvToRgb(0.3F, 1.0F, 0.8F), Potions.STRONG_POISON, false, true, AEItems.FLARE.get(), null));
+        BREATH_BLASTER = REGISTER.register("breath_blaster", () -> new EffectCloudGunWeaponItem((new Item.Properties().rarity(Rarity.UNCOMMON)), 10.5F, 2.0F, 1, 0.5F, 10, 4, 1, 100, 60, 2, Mth.hsvToRgb(0.8F, 1.0F, 0.6F), Potions.HARMING.value(), false, true, AEItems.FLARE.get(), null));
+        NOXIOUS_BURST_CANNON = REGISTER.register("noxious_burst_cannon", () -> new EffectCloudGunWeaponItem((new Item.Properties().rarity(Rarity.UNCOMMON)), 10.5F, 2.0F, 1, 0.5F, 8, 8, 2, 80, 60, 3, Mth.hsvToRgb(0.3F, 1.0F, 0.8F), Potions.STRONG_POISON.value(), false, true, AEItems.FLARE.get(), null));
         REVOLVER = REGISTER.register("revolver", () -> new GunWeaponItem((new Item.Properties()), 6.0F, 3.0, 1, 0.1F, 10, 6, 2, 70, false, true, AEItems.AMMO.get(), AEItems.KEY.get()));
         SIXLET_SIXSHOOTER = REGISTER.register("sixlet_sixshooter", () -> new CandyGunWeaponItem((new Item.Properties()), 4.5F, 3.0, 1, 0.1F, 10, 6, 1, 70, false, true, MSItems.CANDY_CORN.get(), null));
         DAPPLE_DEULY = REGISTER.register("dapple_deuly", () -> new GunWeaponItem((new Item.Properties().rarity(Rarity.RARE)), 9.5F, 3.0, 1, 0.1F, 8, 18, 3, 60, false, true, AEItems.AMMO.get(), AEItems.DEULING_BLADE.get()));

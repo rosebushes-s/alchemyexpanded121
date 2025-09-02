@@ -9,14 +9,14 @@ public class CrewSuitArmorModel extends GeoModel<CrewSuitItem> {
     }
 
     public ResourceLocation getModelResource(CrewSuitItem animatable) {
-        return new ResourceLocation("alchemyexpanded", "geo/skirt_clothes_model.geo.json");
+        return ResourceLocation.fromNamespaceAndPath("alchemyexpanded", "geo/skirt_clothes_model.geo.json");
     }
 
     public ResourceLocation getTextureResource(CrewSuitItem animatable) {
-        return new ResourceLocation("alchemyexpanded", "textures/models/armor/crew_businesswear.png");
+        return ResourceLocation.fromNamespaceAndPath("alchemyexpanded", "textures/models/armor/crew_businesswear.png");
     }
 
     public ResourceLocation getAnimationResource(CrewSuitItem animatable) {
-        return new ResourceLocation("alchemyexpanded", "animations/crew_businesswear.animation.json");
+        return ResourceLocation.fromNamespaceAndPath("alchemyexpanded", "animations/crew_businesswear.animation.json");
     }
 }

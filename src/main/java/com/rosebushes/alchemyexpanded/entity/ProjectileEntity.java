@@ -1,9 +1,8 @@
 package com.rosebushes.alchemyexpanded.entity;
 
-import com.mraof.minestuck.client.util.MagicEffect;
-import com.mraof.minestuck.network.MagicRangedEffectPacket;
 import com.rosebushes.alchemyexpanded.item.AEItems;
 import com.rosebushes.alchemyexpanded.network.BulletEffectPacket;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -11,6 +10,7 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
@@ -136,7 +136,7 @@ public class ProjectileEntity extends Projectile implements ItemSupplier {
             Entity target = raytrace.getEntity();
             Entity shooter = getOwner();
 
-            if (isOnFire()) target.setSecondsOnFire(5);
+            if (isOnFire()) target.setRemainingFireTicks(100);
             int lastHurtResistant = target.invulnerableTime;
             target.invulnerableTime = 0;
             double hitdamage = this.damage;
@@ -151,14 +151,14 @@ public class ProjectileEntity extends Projectile implements ItemSupplier {
                 Vec3 eyePos = target.getEyePosition(1.0F);
                 Vec3 lookVec = shooter.getLookAngle();
 
-                this.sendEffectPacket(shooter.level(), eyePos, lookVec);
+                this.sendEffectPacket((ServerLevel)shooter.level(), eyePos, lookVec);
             }
             if (!damaged) target.invulnerableTime = lastHurtResistant;
         }
     }
 
-    protected void sendEffectPacket(Level level, Vec3 pos, Vec3 lookVec) {
-        PacketDistributor.NEAR.with(new PacketDistributor.TargetPoint(pos.x, pos.y, pos.z, (double)64.0F, level.dimension())).send(new CustomPacketPayload[]{new BulletEffectPacket(pos, lookVec)});
+    protected void sendEffectPacket(ServerLevel level, Vec3 pos, Vec3 lookVec) {
+        PacketDistributor.sendToPlayersNear(level, null, pos.x, pos.y, pos.z, 64.0, new BulletEffectPacket(pos, lookVec));
     }
 
     @SuppressWarnings("resource")
@@ -203,8 +203,8 @@ public class ProjectileEntity extends Projectile implements ItemSupplier {
     }
 
     @Override
-    protected void defineSynchedData() {
-        this.getEntityData().define(DATA_ITEM_STACK, ItemStack.EMPTY);
+    protected void defineSynchedData(SynchedEntityData.Builder builder) {
+        this.getEntityData().set(DATA_ITEM_STACK, ItemStack.EMPTY);
     }
 
     @Override
@@ -212,7 +212,7 @@ public class ProjectileEntity extends Projectile implements ItemSupplier {
         super.readAdditionalSaveData(compoundTag);
         sinceSpawned = compoundTag.getInt("tsf");
         damage = compoundTag.getDouble("damage");
-        setWeapon(ItemStack.of(compoundTag.getCompound("Item")));
+        setWeapon(ItemStack.parse(Minecraft.getInstance().player.level().registryAccess(), compoundTag.get("Item")).get());
     }
 
     @Override
@@ -221,7 +221,7 @@ public class ProjectileEntity extends Projectile implements ItemSupplier {
         compoundTag.putDouble("damage", damage);
         compoundTag.putInt("tsf", sinceSpawned);
         ItemStack stack = getWeapon();
-        if(!stack.isEmpty()) compoundTag.put("Item", stack.save(new CompoundTag()));
+        if(!stack.isEmpty()) compoundTag.put("Item", stack.save(Minecraft.getInstance().player.level().registryAccess()));
     }
 
     @Override

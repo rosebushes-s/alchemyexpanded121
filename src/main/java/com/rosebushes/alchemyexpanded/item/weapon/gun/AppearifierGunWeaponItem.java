@@ -34,7 +34,7 @@ public class AppearifierGunWeaponItem extends GunWeaponItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         int rate = getRate();
         double reloadTime = (double) Math.round((getReload() * 0.05) * 2) / 2.0F;
         int ammoCap = getAmmo();

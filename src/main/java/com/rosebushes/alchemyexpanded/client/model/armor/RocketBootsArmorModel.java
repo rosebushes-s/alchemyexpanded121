@@ -9,14 +9,14 @@ public class RocketBootsArmorModel extends GeoModel<RocketBootsArmorItem> {
     }
 
     public ResourceLocation getModelResource(RocketBootsArmorItem animatable) {
-        return new ResourceLocation("minestuck", "geo/iron_lass_armor.geo.json");
+        return ResourceLocation.fromNamespaceAndPath("minestuck", "geo/iron_lass_armor.geo.json");
     }
 
     public ResourceLocation getTextureResource(RocketBootsArmorItem animatable) {
-        return new ResourceLocation("alchemyexpanded", "textures/models/armor/rocket_boots.png");
+        return ResourceLocation.fromNamespaceAndPath("alchemyexpanded", "textures/models/armor/rocket_boots.png");
     }
 
     public ResourceLocation getAnimationResource(RocketBootsArmorItem animatable) {
-        return new ResourceLocation("minestuck", "animations/iron_lass.animation.json");
+        return ResourceLocation.fromNamespaceAndPath("minestuck", "animations/iron_lass.animation.json");
     }
 }

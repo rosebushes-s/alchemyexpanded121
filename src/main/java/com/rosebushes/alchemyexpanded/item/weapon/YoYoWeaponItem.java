@@ -65,7 +65,7 @@ public class YoYoWeaponItem extends Item {
     public void releaseUsing(ItemStack item, Level level, LivingEntity livingEntity, int timeCharged) {
         float dmgMod = timeCharged > cooldown ? 0.25F : 0.75F;
 
-        if(timeCharged >= this.getUseDuration(item) - 5) return;
+        if(timeCharged >= this.getUseDuration(item, livingEntity) - 5) return;
 
         if(timeCharged <= 1) return;
 

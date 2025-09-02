@@ -3,6 +3,7 @@ package com.rosebushes.alchemyexpanded.entity;
 import com.mraof.minestuck.entity.underling.BasiliskEntity;
 import com.mraof.minestuck.entity.underling.BasiliskPartEntity;
 import com.rosebushes.alchemyexpanded.item.AEItems;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -51,7 +52,7 @@ public class AppearifierProjectileEntity extends ProjectileEntity {
                     double addZ = shooterLookZ ? 2.0 : -2.0;
                     Vec3 eyePos = target.getEyePosition(1.0F);
 
-                    this.sendEffectPacket(shooter.level(), eyePos, shooterAngle);
+                    this.sendEffectPacket((ServerLevel) shooter.level(), eyePos, shooterAngle);
                     target.setPos(shooter.getX() + addX, shooter.getY(), shooter.getZ() + addZ);
                 }
             }

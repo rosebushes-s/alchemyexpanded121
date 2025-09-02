@@ -6,10 +6,10 @@ import net.neoforged.neoforge.network.handling.IPayloadContext;
 
 public interface AEPacket {
     public interface PlayToClient extends CustomPacketPayload {
-        void execute(IPayloadContext var1);
+        void execute(IPayloadContext context);
     }
 
     public interface PlayToServer extends CustomPacketPayload {
-        void execute(IPayloadContext var1, ServerPlayer var2);
+        void execute(IPayloadContext context, ServerPlayer player);
     }
 }

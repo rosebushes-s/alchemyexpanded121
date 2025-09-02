@@ -23,7 +23,7 @@ public class FireYoYoProjectileEntity extends YoYoProjectileEntity {
             Entity entity = ((EntityHitResult) result).getEntity();
 
             if(entity instanceof LivingEntity livingEntity) {
-                livingEntity.setSecondsOnFire(5);
+                livingEntity.setRemainingFireTicks(100);
             }
         }
     }
